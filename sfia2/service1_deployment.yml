@@ -19,6 +19,5 @@ spec:
         image: sophiec0s/service1
         ports:
         - containerPort: 5000
-        env:
 
         

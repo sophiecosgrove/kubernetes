@@ -2,20 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels: 
-    app: nginxdeployment
-  name: nginxdeployment
+    app: service2deployment
+  name: service2deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: service2
   template:
     metadata:
       labels:
-        app: nginx
+        app: service2
     spec:
       containers:
-      - name: nginx
-        image: sophiec0s/nginx
+      - name: service2
+        image: sophiec0s/service2
         ports:
-        - containerPort: 80
+        - containerPort: 5001
